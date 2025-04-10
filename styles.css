@@ -1,4 +1,4 @@
-/* ================================
+d/* ================================
    🌍 Global Styles (Fixes White Issues)
    ================================ */
 body {
@@ -295,7 +295,7 @@ th, td {
    
 /*✨ Animated Section Titles */
 h2 {
-  animation: fadeSlideIn 1.5s ease-in-out both;
+  animation: fadeSlideIn 3.5s ease-in-out both;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
@@ -329,4 +329,44 @@ h2 {
   animation-delay: 0.6s;
 }
 
+/* 🎥 Fullscreen Video Container */
+.intro-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.intro-video iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* 🦸 Hero Section Overlayed on Video */
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 180px 20px 100px;
+  background: rgba(255, 255, 255, 0.85);
+  animation: fadeSlideIn 2s ease-in-out both;
+}
+
+/* ✨ Animated Slide & Fade In */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
