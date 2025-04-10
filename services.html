@@ -2,69 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Services - Landscaping Project</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    body {
+      background-image: url('images/landscaping-background.jpg'); /* Make sure this path is correct */
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: white; /* Ensure text is visible over the background */
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(0, 0, 0, 0.6); /* Add semi-transparent background for text readability */
+    }
+
+    /* Service Section */
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 0;
+    }
+
+    .service-item {
+      background-color: rgba(255, 255, 255, 0.9); /* Light background for each service */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Adjust for mobile */
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-item {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <!-- Navigation Menu -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Our Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <header class="hero">
-    <h1>Transform Your Outdoor Space</h1>
-    <p>Professional Landscaping Services for the Perfect Lawn</p>
-    <a href="contact.html" class="btn">Get in Touch</a>
+    <h1>Our Landscaping Services</h1>
+    <p>We offer a range of professional landscaping services to enhance your outdoor space.</p>
   </header>
 
   <!-- Services Offered -->
   <section class="services">
-    <h2 class="services-title">What We Offer</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="images/lawn-care.jpg" alt="Lawn Care">
-        <h3>Lawn Care</h3>
-        <p>Keep your lawn lush and healthy with our expert care services. Our team ensures proper mowing, feeding, and weed control.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/garden-design.jpg" alt="Garden Design">
-        <h3>Garden Design</h3>
-        <p>Transform your outdoor space with a custom garden design that fits your style, from plants to layout and decor.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/tree-trimming.jpg" alt="Tree Trimming">
-        <h3>Tree Trimming</h3>
-        <p>Ensure the health and beauty of your trees. We offer trimming, pruning, and maintenance to keep your trees thriving.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/patio-installation.jpg" alt="Patio Installation">
-        <h3>Patio Installation</h3>
-        <p>We create beautiful outdoor patios, perfect for relaxation and entertaining. We offer everything from design to installation.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/irrigation.jpg" alt="Irrigation Systems">
-        <h3>Irrigation Systems</h3>
-        <p>Save time and water with our efficient irrigation system installations, ensuring your garden thrives with minimal effort.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/landscaping-lighting.jpg" alt="Landscaping Lighting">
-        <h3>Landscaping Lighting</h3>
-        <p>Light up your outdoor space with stunning lighting solutions. We provide lighting design and installation for your garden and walkways.</p>
-      </div>
+    <div class="service-item">
+      <img src="images/lawn-care.jpg" alt="Lawn Care" />
+      <h3>Lawn Care</h3>
+      <p>Keep your lawn lush and healthy with our expert lawn care services.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/garden-design.jpg" alt="Garden Design" />
+      <h3>Garden Design</h3>
+      <p>Transform your outdoor space with a personalized garden design.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/tree-trimming.jpg" alt="Tree Trimming" />
+      <h3>Tree Trimming</h3>
+      <p>Ensure the health and beauty of your trees with our trimming services.</p>
     </div>
   </section>
 
   <!-- Call-to-Action -->
   <section class="cta">
-    <h2>Ready to Transform Your Outdoors?</h2>
-    <p>Get in touch today for a consultation. Our team is ready to bring your vision to life!</p>
+    <h2>Get in Touch</h2>
+    <p>If you're interested in any of our services, feel free to contact us for a free consultation!</p>
     <a href="contact.html" class="btn">Contact Us</a>
   </section>
 
@@ -72,163 +106,5 @@
     <p>&copy; 2025 Landscaping Project. All Rights Reserved.</p>
   </footer>
 
-  <style>
-    /* Universal Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-
-    /* Navigation */
-    nav {
-      background-color: #333;
-      padding: 10px 20px;
-      text-align: center;
-    }
-    nav ul {
-      list-style-type: none;
-    }
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #ff6600;
-    }
-
-    /* Hero Section */
-    .hero {
-      background-image: url('images/hero-background.jpg');
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-      position: relative;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
-    }
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .hero .btn {
-      padding: 10px 25px;
-      background-color: #ff6600;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .hero .btn:hover {
-      background-color: #cc5200;
-    }
-
-    /* Services Section */
-    .services {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .services-title {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-      padding-top: 20px;
-    }
-    .service-card {
-      width: 30%;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    }
-    .service-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    .service-card h3 {
-      font-size: 1.4rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .service-card p {
-      font-size: 1rem;
-      color: #666;
-    }
-
-    /* Call-to-Action Section */
-    .cta {
-      background-color: #333;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .cta h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .cta .btn {
-      padding: 10px 20px;
-      background-color: #ff6600;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .cta .btn:hover {
-      background-color: #cc5200;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-      .services-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-      .service-card {
-        width: 90%;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
 </body>
 </html>
