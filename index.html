@@ -21,13 +21,13 @@
     }
 
     .hero h1 {
-      font-size: 4rem;  /* Increased size */
+      font-size: 4rem;
       color: #222;
       font-weight: bold;
       margin-bottom: 20px;
-      letter-spacing: 2px;  /* Adds spacing between letters */
-      text-transform: uppercase;  /* Makes the title stand out */
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
       animation: fadeIn 1s ease-out;
     }
 
@@ -51,6 +51,8 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
       letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
     }
 
     .hero-btn:hover {
@@ -85,6 +87,7 @@
         opacity: 0;
       }
     }
+
     /* Fade-in animation */
     @keyframes fadeIn {
       from {
@@ -151,10 +154,10 @@
         padding: 80px 20px;
       }
       .hero h1 {
-        font-size: 2.5rem;  /* Decreased font size for smaller screens */
+        font-size: 2.5rem;
       }
       .hero p {
-        font-size: 1.5rem;  /* Adjusted font size for better readability */
+        font-size: 1.5rem;
       }
       .hero-btn {
         padding: 12px 24px;
@@ -165,11 +168,10 @@
         margin: 10px 0;
       }
       .intro-video iframe {
-        height: 50vh; /* Reduce height of video on small screens */
+        height: 50vh;
       }
     }
     
-    /* Larger Screens */
     @media (min-width: 1024px) {
       .hero {
         padding: 120px 40px;
@@ -182,7 +184,6 @@
 </head>
     
 <body>
-  
   <!-- Navigation Menu -->
   <nav>
     <ul>
@@ -210,148 +211,23 @@
     <a href="services.html" class="btn hero-btn">View Services</a>
   </header>
 
-</body>
-</html>
-
-
-  
-  <!-- Image Gallery -->
-  <section class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-container">
-      <figure>
-        <img src="images/before.jpg" alt="Before Landscaping">
-        <figcaption>Before Landscaping</figcaption>
-      </figure>
-      <figure>
-        <img src="images/After.jpg" alt="After Landscaping">
-        <figcaption>After Landscaping</figcaption>
-      </figure>
-    </div>
-
-    <div class="gallery-extra">
-      <figure>
-        <a href="https://www.hgtv.com/outdoors/gardens">
-          <img src="images/lawn-care.jpg" alt="Lawn Care Services">
-        </a>
-        <figcaption>Click to Learn More</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Pricing Table -->
-  <section class="pricing">
-    <h2>Pricing Table</h2>
-    <table>
-      <tr><th>Service</th><th>Duration</th><th>Price</th></tr>
-      <tr><td>Lawn Care</td><td>Monthly</td><td>$50</td></tr>
-      <tr><td>Garden Design</td><td>One-time</td><td>$300</td></tr>
-      <tr><td>Tree Trimming</td><td>Per Tree</td><td>$100</td></tr>
-    </table>
-  </section>
-
-  <!-- Embedded Video -->
-  <section class="video">
-    <h2>Watch Landscaping in Action</h2>
-    <iframe width="600" height="315" 
-      src="https://www.youtube.com/embed/wXP1zppk7HE" 
-      style="border: none; max-width: 100%;" 
-      allowfullscreen>
-      </iframe>
-  </section>
-
-  <!-- Spotify Embed -->
-  <section class="spotify-embed">
-    <h2>Listen to Our Podcast</h2>
-    <iframe src="https://open.spotify.com/embed/episode/6bsfYpklWFGZY5KQEZKctI?utm_source=generator" width="600" height="352" style="border: none; max-width: 100%;" allowfullscreen></iframe>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      <p>"This landscaping service transformed my backyard! Highly recommend!"</p>
-      <h4>- Sarah J.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Professional and friendly staff. My garden has never looked better!"</p>
-      <h4>- Mike W.</h4>
-    </div>
-  </section>
-
-  <!-- 🔧🔺 Popup Contact Button (added) -->
-  <section class="popup-contact">
-    <button id="openFormBtn" class="btn">Contact Us</button>
-  </section>
-
-  <!-- 🔧🔺 Modal Contact Form (added) -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Contact Us</h2>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea placeholder="Your Message"></textarea>
-      <button class="btn">Send Message</button>
-    </div>
-  </div>
-
-  <!-- 🔧🔻 Removed old static form section here -->
-
-  <!-- 🔧🔺 Giphy Section (restructured and labeled) -->
-  
-  <<section class="gif-showcase">
-  <h2>Growing Greener</h2>
-  <div class="giphy-container">
-    <iframe src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" width="188" height="99" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Landscaping Co. All rights reserved.</p>
-  </footer>
-
-  <!-- 🔧🔺 Modal Script (added for popup functionality) -->
   <script>
-    const modal = document.getElementById("contactModal");
-    const openBtn = document.getElementById("openFormBtn");
-    const closeBtn = document.querySelector(".modal .close");
+    // Handle Ripple Effect on Button Click
+    const btn = document.querySelector('.hero-btn');
+    btn.addEventListener('click', function (e) {
+      const ripple = document.createElement('div');
+      const size = Math.max(btn.offsetWidth, btn.offsetHeight);
+      const x = e.clientX - btn.offsetLeft - size / 2;
+      const y = e.clientY - btn.offsetTop - size / 2;
 
-    openBtn.onclick = () => modal.style.display = "block";
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    };
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      ripple.classList.add('ripple');
+      btn.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600); // Remove the ripple after animation
+    });
   </script>
-    
-<script>
-  const colors = ["#ff0055", "#ffcc00", "#00cc66", "#3399ff", "#cc33ff"];
-  let i = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    const dot = document.createElement("div");
-    dot.className = "rainbow-dot";
-    dot.style.left = e.pageX + "px";
-    dot.style.top = e.pageY + "px";
-    dot.style.background = colors[i % colors.length];
-    document.body.appendChild(dot);
-    i++;
-    setTimeout(() => dot.remove(), 1000);
-  });
-</script>
-<script>
-  document.addEventListener("mousemove", (e) => {
-    const ripple = document.createElement("div");
-    ripple.className = "splash-ripple";
-    ripple.style.left = `${e.pageX}px`;
-    ripple.style.top = `${e.pageY}px`;
-    document.body.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 800);
-  });
-</script>
-
 </body>
 </html>
