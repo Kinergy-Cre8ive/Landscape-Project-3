@@ -76,6 +76,7 @@
     </form>
   </div>
   <script>
+    
     // Cursor Ripple Effect
     document.addEventListener("mousemove", (e) => {
       const ripple = document.createElement("div");
@@ -85,7 +86,6 @@
       document.body.appendChild(ripple);
       setTimeout(() => ripple.remove(), 800);
     });
-  </script>
   </script>
   <style>
     .splash-ripple {
@@ -110,9 +110,9 @@
       }
     }
   </style>
+  
 <script>
   const scrollElements = document.querySelectorAll('.scroll-fade');
-
   const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -122,16 +122,14 @@
       }
     });
   }, { threshold: 0.1 });
-
   scrollElements.forEach(el => scrollObserver.observe(el));
 </script>
-
+  
+  <script>
   // Open modal when the button is clicked
   openBtn.onclick = () => modal.style.display = "block";
-
   // Close modal when the close button (X) is clicked
   closeBtn.onclick = () => modal.style.display = "none";
-
   // Close modal when clicking outside the modal
   window.onclick = (e) => {
     if (e.target === modal) {
@@ -151,7 +149,9 @@
   !-- Footer with Giphy -->
   <footer>
     <div class="giphy-container">
-      <iframe id="giphy-embed" src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+      <iframe id="giphy-embed" src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" 
+        width="300" height="300" 
+        frameborder="0" class="giphy-embed" allowfullscreen></iframe>
     </div>
     <p style="text-align:center;">&copy; 2025 Landscaping Co. All rights reserved.</p>
   </footer>
