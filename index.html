@@ -2,78 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landscaping Project</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
- /* ================================
-       Smooth Scroll
-    ================================ */
     html {
-      scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+      scroll-behavior: smooth;
     }
-    
-    /* ================================
-       Hero Section Styling
-    ================================ */
-    .hero {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 100px 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-      color: #333;
-      animation: fadeInUp 1.5s ease-out;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-
-    .hero h1 {
-      font-size: 4rem;
-      color: #222;
-      font-weight: bold;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-out;
-    }
-
-    .hero p {
-      font-size: 1.8rem;
-      color: #555;
-      font-weight: lighter;
-      margin-bottom: 30px;
-      line-height: 1.5;
-      opacity: 0.8;
-      animation: fadeIn 1.5s ease-out 0.2s;
-    }
-
-    .hero-btn {
-      padding: 15px 30px;
-      background-color: #00c6ff;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      letter-spacing: 1px;
-      position: relative;
-      overflow: hidden;
-      animation: buttonSlideIn 1s ease-out;
-    }
-
-    .hero-btn:hover {
-      transform: scale(1.05);
-      background-color: #0072ff;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    /* ================================
-       Navigation Styling
-    ================================ */
     nav {
       background-color: #333;
       position: fixed;
@@ -85,295 +25,192 @@
     }
     nav ul {
       list-style: none;
-      text-align: center;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
     nav ul li {
       display: inline;
-      margin: 0 10px;
+      margin: 0 15px;
     }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-size: 18px;
-      transition: color 0.3s ease;
     }
     nav ul li a:hover {
       color: #ffcc00;
     }
-
-    /* ================================
-       Intro Video Section Styling
-    ================================ */
-    .intro-video {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      z-index: -1;
+    header.hero {
+      padding: 120px 20px 80px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(5px);
     }
-    .intro-video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: none;
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-     
-  <!-- Pricing Table Section -->
-  <section class="pricing">
-    <h2>Pricing Guide</h2>
-    <table>
-      <tr>
-        <th>Service</th>
-        <th>Duration</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Lawn Care</td>
-        <td>Monthly</td>
-        <td>$50</td>
-      </tr>
-      <tr>
-        <td>Garden Design</td>
-        <td>One-time</td>
-        <td>$300</td>
-      </tr>
-      <tr>
-        <td>Tree Trimming</td>
-        <td>Per Tree</td>
-        <td>$100</td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- YouTube Embed Section -->
-  <section class="video">
-    <h2>Watch Landscaping in Action</h2>
-    <iframe width="600" height="315" 
-      src="https://www.youtube.com/embed/wXP1zppk7HE" 
-      style="border: none; max-width: 100%;" 
-      allowfullscreen>
-    </iframe>
-  </section>
-
-  <!-- Spotify Podcast Embed Section -->
-  <section class="spotify-embed">
-    <h2>Listen to Our Podcast</h2>
-    <iframe src="https://open.spotify.com/embed/episode/6bsfYpklWFGZY5KQEZKctI?utm_source=generator" 
-      width="600" height="352" 
-      style="border: none; max-width: 100%;" 
-      allowfullscreen>
-    </iframe>
-  </section>
-
-    /* ================================
-       Responsiveness for all screens
-    ================================ */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 80px 20px;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1.5rem;
-      }
-      .hero-btn {
-        padding: 12px 24px;
-        font-size: 1rem;
-      }
-      nav ul li {
-        display: block;
-        margin: 10px 0;
-      }
-      .intro-video iframe {
-        height: 50vh;
-      }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 10px 0 20px;
     }
-    
-    @media (min-width: 1024px) {
-      .hero {
-        padding: 120px 40px;
-      }
-      .intro-video iframe {
-        height: 100vh;
-      }
+    .hero-btn {
+      background: #0072ff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease;
     }
-
-    /* ================================
-       Gallery Styling
-    ================================ */
+    .hero-btn:hover {
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
     .gallery-container {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
-      gap: 15px;
-      margin: 30px auto;
     }
-
     .gallery-container figure {
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: center;
     }
-
     .gallery-container img {
       width: 100%;
-      height: auto;
       border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-
-    .gallery-container figcaption {
-      text-align: center;
-      font-size: 1rem;
-      color: #333;
-      margin-top: 5px;
+    .gallery-container img:hover {
+      transform: scale(1.05);
     }
-
-    /* ================================
-       Testimonials Section
-    ================================ */
-    .testimonials {
-      background-color: #f9f9f9;
-      padding: 40px;
-      text-align: center;
-      border-radius: 10px;
-      margin: 50px auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .testimonial {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      width: 60%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    .testimonial p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    .testimonial h4 {
-      font-size: 1.3rem;
-      color: #333;
-    }
-
-    /* ================================
-       Modal Popup Form
-    ================================ */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
+    table {
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+      border-collapse: collapse;
     }
-
-    .modal-content {
-      background-color: #fff;
-      padding: 20px;
-      margin: 10% auto;
-      width: 80%;
-      max-width: 400px;
-      border-radius: 10px;
-    }
-
-    .close {
-      font-size: 24px;
-      font-weight: bold;
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      cursor: pointer;
-    }
-
-    .modal-content input,
-    .modal-content textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
+    th, td {
       border: 1px solid #ccc;
-    }
-
-    .modal-content .btn {
-      background-color: #0072ff;
-      color: white;
-      border: none;
       padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #0072ff;
+      color: white;
+    }
+    iframe {
       width: 100%;
-      border-radius: 5px;
-      cursor: pointer;
+      border: none;
+      border-radius: 10px;
     }
-
-    /* ================================
-       Button and Form Hover Effects
-    ================================ */
+    .testimonials, .contact {
+      background: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .testimonial {
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #0072ff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
     .btn:hover {
-      background-color: #ffcc00;
-      transition: all 0.3s ease;
+      background: #005dc1;
     }
-
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .giphy-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .giphy-embed {
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .giphy-embed:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
-
 <body>
-  <!-- Navigation Menu -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Our Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Intro Autoplay Background Video -->
-  <section class="intro-video">
-    <iframe
-      src="https://www.youtube.com/embed/_FcXEaxQBpw?autoplay=1&mute=1&controls=0&loop=1&playlist=_FcXEaxQBpw"
-      title="Intro Video"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-    ></iframe>
-  </section>
-
-  <!-- Hero Section -->
-  <header class="hero">
+  <section id="hero" class="hero">
     <h1>Transform Your Outdoor Space</h1>
     <p>Professional Landscaping Services</p>
-    <a href="services.html" class="btn hero-btn">View Services</a>
-  </header>
+    <a href="#contact" class="hero-btn">Contact Us</a>
+  </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery">
+  <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-container">
       <figure>
         <img src="images/before.jpg" alt="Before Landscaping">
-        <figcaption>Before Landscaping</figcaption>
+        <figcaption>Before</figcaption>
       </figure>
       <figure>
         <img src="images/after.jpg" alt="After Landscaping">
-        <figcaption>After Landscaping</figcaption>
+        <figcaption>After</figcaption>
+      </figure>
+      <figure>
+        <a href="https://www.hgtv.com/outdoors" target="_blank">
+          <img src="images/lawn-care.jpg" alt="Lawn Tips">
+        </a>
+        <figcaption>Lawn Tips</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+  <section id="pricing" class="pricing">
+    <h2>Pricing Guide</h2>
+    <table>
+      <tr><th>Service</th><th>Duration</th><th>Price</th></tr>
+      <tr><td>Lawn Care</td><td>Monthly</td><td>$50</td></tr>
+      <tr><td>Garden Design</td><td>One-time</td><td>$300</td></tr>
+      <tr><td>Tree Trimming</td><td>Per Tree</td><td>$100</td></tr>
+    </table>
+  </section>
+
+  <section id="videos">
+    <h2>Watch Our Work</h2>
+    <iframe src="https://www.youtube.com/embed/wXP1zppk7HE" allowfullscreen></iframe>
+    <br><br>
+    <iframe src="https://www.youtube.com/embed/_FcXEaxQBpw" allowfullscreen></iframe>
+  </section>
+
+  <section class="spotify-embed">
+    <h2>Listen to Our Podcast</h2>
+    <iframe src="https://open.spotify.com/embed/episode/6bsfYpklWFGZY5KQEZKctI?utm_source=generator" width="100%" height="352" allowfullscreen></iframe>
+  </section>
+
   <section class="testimonials">
-    <h2>What Our Clients Say</h2>
+    <h2>Testimonials</h2>
     <div class="testimonial">
       <p>"This landscaping service transformed my backyard! Highly recommend!"</p>
       <h4>- Sarah J.</h4>
@@ -384,81 +221,31 @@
     </div>
   </section>
 
-  <!-- Modal Contact Form -->
-  <section class="popup-contact">
-    <button id="openFormBtn" class="btn">Contact Us</button>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <textarea placeholder="Your Message"></textarea>
+    <button class="btn">Send Message</button>
   </section>
 
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Contact Us</h2>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea placeholder="Your Message"></textarea>
-      <button class="btn">Send Message</button>
+  <footer>
+    <div class="giphy-container">
+      <iframe id="giphy-embed" src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
     </div>
-  </div>
+    <p>&copy; 2025 Landscaping Co. All rights reserved.</p>
+  </footer>
 
   <script>
-    const modal = document.getElementById("contactModal");
-    const openBtn = document.getElementById("openFormBtn");
-    const closeBtn = document.querySelector(".modal .close");
-
-    openBtn.onclick = () => modal.style.display = "block";
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
-
-  <script>
-    document.addEventListener("mousemove", (e) => {
-      const ripple = document.createElement("div");
-      ripple.className = "splash-ripple";
-      ripple.style.left = `${e.pageX}px`;
-      ripple.style.top = `${e.pageY}px`;
-      document.body.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 800); // remove ripple after 0.8 seconds
+    document.getElementById('giphy-embed').addEventListener('click', function () {
+      const gifs = [
+        "https://giphy.com/embed/lSCsXkcjWIG2amHk1H",
+        "https://giphy.com/embed/3o6ZsT0U71wHF9c5n2",
+        "https://giphy.com/embed/3o6gE5hL9lmD7rWHDW"
+      ];
+      const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+      this.src = randomGif;
     });
   </script>
-  
-<!-- Footer Section -->
-<footer>
-  <div class="giphy-container">
-    <!-- Default GIF -->
-    <iframe id="giphy-embed" src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-  </div>
-  <p>&copy; 2025 Landscaping Co. All rights reserved.</p>
-</footer>
-
-<style>
-  /* Giphy Container Styling */
-  .giphy-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  /* Giphy Hover Effect */
-  .giphy-embed {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  /* Hover zoom effect */
-  .giphy-embed:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 180, 255, 0.7);
-  }
-</style>
-    document.getElementById('giphy-embed').src = randomGif;
-  });
-</script>
-
 </body>
 </html>
