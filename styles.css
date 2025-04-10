@@ -160,4 +160,13 @@ iframe {
   max-width: 100%;
   height: auto;
 }
+@media (max-width: 768px) {
+  .intro-video iframe {
+    width: 100%;
+    height: auto;
+  }
+  .intro-video {
+    background-image: none; /* Hide background image on mobile */
+  }
+}
 
