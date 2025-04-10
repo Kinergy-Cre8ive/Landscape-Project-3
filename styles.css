@@ -112,6 +112,11 @@ img:hover {
     max-width: 300px;
 }
 
+    /* ✅ ADD THESE NEW LINES INSIDE HERE */
+    .gallery-container, .testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 /* ================================
    📊 Table Styling
    ================================ */
