@@ -192,7 +192,7 @@
   document.addEventListener('keydown', (e) => {
     keySequence.push(e.key.toLowerCase());
     if (keySequence.length > secretCode.length) {
-      keySequence.shift(); // Keep last few keys
+      keySequence.shift();
     }
 
     if (keySequence.join('') === secretCode.join('')) {
