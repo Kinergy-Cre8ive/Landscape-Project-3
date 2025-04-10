@@ -823,12 +823,3 @@ nav ul li a {
   padding: 100px 20px; /* Adjust the padding as needed */
   text-align: center;
 }
-/* Hero Section with Background Image */
-.hero {
-  background-image: url('images/your-background-image.jpg'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 20px; /* Adjust the padding as needed */
-  text-align: center;
-}
