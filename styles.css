@@ -661,3 +661,23 @@ nav {
         transform: translateY(0);
     }
 }
+
+/* Footer Section Styling */
+footer {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+}
+
+.giphy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.giphy-embed {
+  width: 300px; /* You can adjust the size as needed */
+  height: 300px;
+}
