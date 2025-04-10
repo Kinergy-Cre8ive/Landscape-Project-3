@@ -78,23 +78,25 @@
       <h4>- Mike W.</h4>
     </div>
   </section>
-
-  <!-- Contact Button -->
+  
+<!-- Contact Button -->
 <section class="popup-contact scroll-fade">
-    <button id="openFormBtn" class="btn">Contact Us</button>
-  </section>
+  <button id="openFormBtn" class="btn">Contact Us</button>
+</section>
 
-  <!-- Modal Contact Form -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Contact Us</h2>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea placeholder="Your Message"></textarea>
-      <button class="btn">Send Message</button>
-    </div>
+<!-- Modal Contact Form -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </div>
+</div>
 
   <!-- Footer with Giphy -->
   <footer>
