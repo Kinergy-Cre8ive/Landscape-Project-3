@@ -8,7 +8,6 @@ body {
     padding-top: 60px; /* Prevents content from hiding under fixed nav */
 }
 
-/* Remove all unwanted white gaps */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +33,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -73,17 +72,17 @@ figcaption {
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 0;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 img:hover {
-  transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 /* ================================
@@ -93,24 +92,24 @@ img:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
 .gallery-container img {
-  flex: 1 1 auto;
-  max-width: 300px;
-  border-radius: 10px;
+    flex: 1 1 auto;
+    max-width: 300px;
+    border-radius: 10px; /* Add border-radius for consistency */
 }
 
 /* ================================
    📊 Table Styling
    ================================ */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: #c0c0c0;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #c0c0c0;
+    border-spacing: 0;
 }
 
 th, td {
@@ -141,7 +140,6 @@ th, td {
     height: auto;
     max-width: 1200px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ================================
@@ -234,6 +232,7 @@ th, td {
        background-color: rgba(0, 0, 0, 0.6);
    }
 
+   /* Modal Content Box */
    .modal-content {
        background-color: #f4f4f4;
        margin: 10% auto;
@@ -245,6 +244,7 @@ th, td {
        text-align: center;
    }
 
+   /* Close Button */
    .close {
        position: absolute;
        top: 10px;
@@ -254,7 +254,9 @@ th, td {
        cursor: pointer;
    }
 
-   .modal-content input, .modal-content textarea {
+   /* Form Inputs */
+   .modal-content input,
+   .modal-content textarea {
        width: 90%;
        margin: 10px 0;
        padding: 10px;
@@ -262,6 +264,7 @@ th, td {
        border: 1px solid #aaa;
    }
 
+   /* Submit Button */
    .modal-content .btn {
        width: 95%;
        background-color: #333;
@@ -279,6 +282,7 @@ th, td {
        background-color: rgba(255, 255, 255, 0.8);
    }
 
+   /* Animated Section Titles */
    h2 {
        animation: fadeSlideIn 3.5s ease-in-out both;
        font-size: 2rem;
@@ -297,6 +301,7 @@ th, td {
        }
    }
 
+   /* Delayed animation per section */
    .gallery-title {
        animation: fadeSlideIn 1.5s ease-in-out both;
        animation-delay: 0.2s;
@@ -312,6 +317,7 @@ th, td {
        animation-delay: 0.6s;
    }
 
+   /* Fullscreen Video Container */
    .intro-video {
        position: fixed;
        top: 0;
@@ -330,6 +336,7 @@ th, td {
        opacity: 0.5;
    }
 
+   /* Hero Section Overlayed on Video */
    .hero {
        position: relative;
        z-index: 2;
@@ -339,6 +346,7 @@ th, td {
        animation: fadeSlideIn 3s ease-in-out both;
    }
 
+   /* Animated Slide & Fade In */
    @keyframes fadeSlideIn {
        from {
            opacity: 0;
@@ -373,6 +381,7 @@ th, td {
        }
    }
 
+   /* Hero Title Animation */
    .hero-title {
        font-size: 3rem;
        color: #222;
@@ -380,6 +389,7 @@ th, td {
        animation: fadeSlideIn 1.2s ease-out both;
    }
 
+   /* Subtitle Style */
    .hero-subtitle {
        font-size: 1.5rem;
        color: #444;
@@ -387,6 +397,7 @@ th, td {
        animation: fadeSlideIn 1.4s ease-out both;
    }
 
+   /* Hero Button */
    .hero-btn {
        margin-top: 20px;
        padding: 12px 24px;
@@ -404,6 +415,7 @@ th, td {
        background: linear-gradient(to right, #0072ff, #00c6ff);
    }
 
+   /* Hero Glow Effect */
    .hero {
        position: relative;
        z-index: 2;
@@ -437,4 +449,54 @@ th, td {
            0 0 10px rgba(0, 150, 255, 0.6),
            0;
    }
-}
+
+   /* Layout Container for Large Screens */
+   section,
+   header.hero,
+   .gallery-container,
+   .video,
+   .spotify-embed,
+   .testimonials,
+   .contact {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 30px 40px;
+   }
+
+   /* Desktop Font and Nav Improvements */
+   @media (min-width: 1024px) {
+       .hero-title {
+           font-size: 3.5rem;
+       }
+
+       .hero-subtitle {
+           font-size: 1.7rem;
+       }
+
+       nav ul li {
+           margin: 0 20px;
+       }
+
+       .gallery-container {
+           gap: 30px;
+       }
+
+       .gallery-container figure {
+           flex: 1 1 300px;
+           text-align: center;
+       }
+
+       .testimonial {
+           width: 45%;
+           margin: 10px auto;
+       }
+
+       table {
+           font-size: 1.1rem;
+       }
+
+       .contact input,
+       .contact textarea {
+           font-size: 1rem;
+       }
+   }
