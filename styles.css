@@ -156,4 +156,8 @@ iframe {
   font-size: 1.1rem;
 }
 
+.giphy-container iframe {
+  max-width: 100%;
+  height: auto;
+}
 
