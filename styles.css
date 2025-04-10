@@ -555,3 +555,109 @@ nav {
     position: sticky;
     top: 0;
 }
+/* ================================
+   Hero Section Styling (Enhanced)
+ ================================ */
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Added background color with dark overlay */
+    backdrop-filter: blur(5px); /* Apply blur effect for the background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #fff; /* White text color for contrast */
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #fff; /* Changed to white text */
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    color: #ddd; /* Lighter text color */
+    font-weight: lighter;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    opacity: 0.9;
+    animation: fadeIn 1.5s ease-out 0.2s;
+}
+
+/* Updated button styling */
+.hero-btn {
+    padding: 15px 30px;
+    background-color: #00c6ff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold; /* Increased font weight */
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    animation: buttonSlideIn 1s ease-out;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    background-color: #0072ff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Add an arrow icon to the button */
+.hero-btn:after {
+    content: ' →'; /* Add an arrow icon */
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover:after {
+    transform: translateX(10px); /* Arrow moves slightly when hovered */
+}
+
+/* Fade-in animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Slide-In Animation */
+@keyframes buttonSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
