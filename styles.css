@@ -292,6 +292,26 @@ th, td {
   padding: 100px 20px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+   
+/*✨ Animated Section Titles */
+h2 {
+  animation: fadeSlideIn 1.5s ease-in-out both;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 🔄 Keyframes for smooth fade + slide */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 } /* ← Keep this brace at the bottom! */
