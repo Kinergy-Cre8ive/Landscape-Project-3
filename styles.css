@@ -408,4 +408,117 @@ h2 {
     opacity: 0;
   }
 }
+/* 🎬 Hero Title Animation */
+.hero-title {
+  font-size: 3rem;
+  color: #222;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+  animation: fadeSlideIn 1.2s ease-out both;
+}
 
+/* 📣 Subtitle Style */
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 10px;
+  animation: fadeSlideIn 1.4s ease-out both;
+}
+
+/* 🔘 Hero Button */
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeSlideIn 1.6s ease-out both;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+/* ✨ Hero Glow Effect */
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 180px 20px 100px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  animation: fadeSlideIn 2s ease-in-out both;
+}
+
+/* 🌟 Glow on Title */
+.hero-title {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(0, 150, 255, 0.5),
+    0 0 40px rgba(0, 150, 255, 0.3);
+  animation: fadeSlideIn 1.2s ease-out both;
+}
+
+/* 🌟 Glow on Button */
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow:
+    0 0 10px rgba(0, 150, 255, 0.6),
+    0
+     
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 180px 20px 100px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  animation: fadeSlideIn 2s ease-in-out both;
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+}
+
+/* Pulsating title glow */
+.hero-title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  animation:
+    fadeSlideIn 1.2s ease-out both,
+    pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Pulsating button */
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  animation:
+    fadeSlideIn 1.6s ease-out both,
+    pulseGlow 2.5s ease-in-out infinite;
+}
