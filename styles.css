@@ -283,6 +283,15 @@ th, td {
   border: none;
   margin-top: 10px;
 }
+   /* styles.css */
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 } /* ← Keep this brace at the bottom! */
 
