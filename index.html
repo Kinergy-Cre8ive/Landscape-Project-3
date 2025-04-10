@@ -156,6 +156,22 @@
       }
     };
   </script>
+    
+<script>
+  const colors = ["#ff0055", "#ffcc00", "#00cc66", "#3399ff", "#cc33ff"];
+  let i = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    const dot = document.createElement("div");
+    dot.className = "rainbow-dot";
+    dot.style.left = e.pageX + "px";
+    dot.style.top = e.pageY + "px";
+    dot.style.background = colors[i % colors.length];
+    document.body.appendChild(dot);
+    i++;
+    setTimeout(() => dot.remove(), 1000);
+  });
+</script>
 
 </body>
 </html>
