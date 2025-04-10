@@ -8,43 +8,212 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   
   <style>
-.hero {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 100px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-</style>
+    /* Hero Section Styling */
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      color: #333;
+    }
+
+    .hero h1 {
+      font-size: 4rem;  /* Increased size */
+      color: #222;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 2px;  /* Adds spacing between letters */
+      text-transform: uppercase;  /* Makes the title stand out */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.8rem;
+      color: #555;
+      font-weight: lighter;
+      margin-bottom: 30px;
+      line-height: 1.5;
+      opacity: 0.8;
+      animation: fadeIn 1.5s ease-out 0.2s;
+    }
+
+    .hero-btn {
+      padding: 15px 30px;
+      background-color: #00c6ff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .hero-btn:hover {
+      transform: scale(1.05);
+      background-color: #0072ff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Ripple Effect Styling */
+    .hero-btn:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.7);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0;
+      animation: ripple 0.6s linear;
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+      }
+    }
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Navigation Menu */
+    nav {
+      background-color: #333;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Intro Video Section */
+    .intro-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .intro-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+    }
+
+    /* Responsiveness for all screens */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 80px 20px;
+      }
+      .hero h1 {
+        font-size: 2.5rem;  /* Decreased font size for smaller screens */
+      }
+      .hero p {
+        font-size: 1.5rem;  /* Adjusted font size for better readability */
+      }
+      .hero-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+      .intro-video iframe {
+        height: 50vh; /* Reduce height of video on small screens */
+      }
+    }
+    
+    /* Larger Screens */
+    @media (min-width: 1024px) {
+      .hero {
+        padding: 120px 40px;
+      }
+      .intro-video iframe {
+        height: 100vh;
+      }
+    }
+  </style>
 </head>
     
 <body>
+  
   <!-- Navigation Menu -->
   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Our Services</a></li>
-    <li><a href="Contact.html">Contact</a></li> <!-- Capital "C" -->
-  </ul>
-</nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
   
-<!-- Intro Autoplay Background Video -->
-<section class="intro-video">
-  <iframe
-    src="https://www.youtube.com/embed/_FcXEaxQBpw?autoplay=1&mute=1&controls=0&loop=1&playlist=_FcXEaxQBpw"
-    title="Intro Video"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-  ></iframe>
-</section>
-
+  <!-- Intro Autoplay Background Video -->
+  <section class="intro-video">
+    <iframe
+      src="https://www.youtube.com/embed/_FcXEaxQBpw?autoplay=1&mute=1&controls=0&loop=1&playlist=_FcXEaxQBpw"
+      title="Intro Video"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </section>
+  
   <!-- Hero Section -->
   <header class="hero">
- <h1 class="hero-title">Transform Your Outdoor Space</h1>
-    <p class="hero-subtitle">Professional Landscaping Services</p>
-<a href="services.html" class="btn hero-btn">View Services</a>
+    <h1>Transform Your Outdoor Space</h1>
+    <p>Professional Landscaping Services</p>
+    <a href="services.html" class="btn hero-btn">View Services</a>
   </header>
+
+</body>
+</html>
+
+
   
   <!-- Image Gallery -->
   <section class="gallery">
