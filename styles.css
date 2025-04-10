@@ -70,6 +70,17 @@ img {
     border-radius: 10px;
 }
 
+figure {
+    text-align: center;
+    margin: 10px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 5px;
+}
+
 /* ================================
    📸 Gallery Styling (No Extra Space)
    ================================ */
