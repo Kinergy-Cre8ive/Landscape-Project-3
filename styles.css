@@ -83,8 +83,14 @@ img:hover {
   transform: scale(1.02);
   transition: 0.9s ease-in-out;
 }
+.giphy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 20px;
+
 .gif-showcase {
-    text-align: right;
+    text-align: center;
     padding: 20px;
 }
 
@@ -92,7 +98,7 @@ img:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 1 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* ================================
