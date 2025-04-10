@@ -1,683 +1,99 @@
-/* ================================
-   🌍 Global Styles (Fixes White Issues)
-   ================================ */
+/* General Reset */
+body, h1, h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    background-color: #d0d0d0; /* Light gray */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding-top: 60px; /* Prevents content from hiding under fixed nav */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ================================
-   📌 Sticky Navigation Bar (Fixed)
-   ================================ */
+/* Navigation Bar */
 nav {
-    background-color: #333;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    text-align: center;
+  list-style: none;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.9s ease-in-out;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* ================================
-   🎨 Sections (Fixes White Blocks)
-   ================================ */
-section {
-    background-color: #c0c0c0;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-/* ================================
-   📸 Image Styling (Fixes White Space)
-   ================================ */
-figure {
-    text-align: center;
-    margin: 10px;
-}
-
-figcaption {
-    font-size: 0.9rem;
-    color: #333;
-    margin-top: 5px;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-img:hover {
-    transform: scale(1.02);
-}
-
-/* ================================
-   📸 Gallery Styling (No Extra Space)
-   ================================ */
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery-container img {
-    flex: 1 1 auto;
-    max-width: 300px;
-    border-radius: 10px; /* Add border-radius for consistency */
-}
-
-/* ================================
-   📊 Table Styling
-   ================================ */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #c0c0c0;
-    border-spacing: 0;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-}
-
-/* ================================
-   🎥 Video & Media Sections
-   ================================ */
-.video, .spotify-embed {
-    text-align: center;
-    margin: 30px;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.video:hover, .spotify-embed:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.video iframe, .spotify-embed iframe {
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    border-radius: 10px;
-}
-
-/* ================================
-   🌟 Testimonials Section (Enhanced)
-   ================================ */
-.testimonials {
-    background-color: #d8d8d8;
-    padding: 30px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 70%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-/* ================================
-   📱 Mobile Optimization
-   ================================ */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    nav ul {
-        display: block;
-        text-align: center;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    table {
-        font-size: 14px;
-    }
-
-    iframe {
-        width: 100%;
-        height: auto;
-    }
-
-    .testimonial {
-        width: 90%;
-    }
-
-    .contact {
-        width: 90%;
-    }
-
-    .gallery-container, .testimonials {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .pricing table, .contact, .video, .spotify-embed {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-   /* Modal Background */
-   .modal {
-       display: none;
-       position: fixed;
-       z-index: 999;
-       left: 0; top: 0;
-       width: 100%; height: 100%;
-       background-color: rgba(0, 0, 0, 0.6);
-   }
-
-   /* Modal Content Box */
-   .modal-content {
-       background-color: #f4f4f4;
-       margin: 10% auto;
-       padding: 20px;
-       border-radius: 10px;
-       width: 80%;
-       max-width: 400px;
-       position: relative;
-       text-align: center;
-   }
-
-   /* Close Button */
-   .close {
-       position: absolute;
-       top: 10px;
-       right: 15px;
-       font-size: 24px;
-       font-weight: bold;
-       cursor: pointer;
-   }
-
-   /* Form Inputs */
-   .modal-content input,
-   .modal-content textarea {
-       width: 90%;
-       margin: 10px 0;
-       padding: 10px;
-       border-radius: 5px;
-       border: 1px solid #aaa;
-   }
-
-   /* Submit Button */
-   .modal-content .btn {
-       width: 95%;
-       background-color: #333;
-       color: white;
-       border: none;
-       margin-top: 10px;
-   }
-
-   /* Hero Section */
-   .hero {
-       position: relative;
-       z-index: 1;
-       text-align: center;
-       padding: 100px 20px;
-       background-color: rgba(255, 255, 255, 0.8);
-   }
-
-   /* Animated Section Titles */
-   h2 {
-       animation: fadeSlideIn 3.5s ease-in-out both;
-       font-size: 2rem;
-       text-align: center;
-       margin-bottom: 20px;
-   }
-
-   @keyframes fadeSlideIn {
-       from {
-           opacity: 0;
-           transform: translateY(30px);
-       }
-       to {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   }
-
-   /* Delayed animation per section */
-   .gallery-title {
-       animation: fadeSlideIn 1.5s ease-in-out both;
-       animation-delay: 0.2s;
-   }
-
-   .pricing-title {
-       animation: fadeSlideIn 1.5s ease-in-out both;
-       animation-delay: 0.4s;
-   }
-
-   .testimonials-title {
-       animation: fadeSlideIn 1.5s ease-in-out both;
-       animation-delay: 0.6s;
-   }
-
-   /* Fullscreen Video Container */
-   .intro-video {
-       position: fixed;
-       top: 0;
-       left: 0;
-       width: 100vw;
-       height: 100vh;
-       z-index: -1;
-       overflow: hidden;
-   }
-
-   .intro-video iframe {
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-       pointer-events: none;
-       opacity: 0.5;
-   }
-
-   /* Hero Section Overlayed on Video */
-   .hero {
-       position: relative;
-       z-index: 2;
-       text-align: center;
-       padding: 180px 20px 100px;
-       background: rgba(255, 255, 255, 0.85);
-       animation: fadeSlideIn 3s ease-in-out both;
-   }
-
-   /* Animated Slide & Fade In */
-   @keyframes fadeSlideIn {
-       from {
-           opacity: 0;
-           transform: translateY(-40px);
-       }
-       to {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   }
-
- /* 💦 Ripple Animation */
-@keyframes ripplePop {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-50%, -50%) scale(10);
-        opacity: 0;
-    }
-}
-
-/* 🎯 Splash Ripple Effect */
-.splash-ripple {
-    position: fixed;
-    width: 12px;
-    height: 12px;
-    border: 2px solid rgba(0, 180, 255, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    animation: ripplePop 0.8s ease-out forwards;
-    z-index: 9999;
-}
-
-
-   /* Hero Title Animation */
-   .hero-title {
-       font-size: 3rem;
-       color: #222;
-       text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
-       animation: fadeSlideIn 1.2s ease-out both;
-   }
-
-   /* Subtitle Style */
-   .hero-subtitle {
-       font-size: 1.5rem;
-       color: #444;
-       margin-top: 10px;
-       animation: fadeSlideIn 1.4s ease-out both;
-   }
-
-   /* Hero Button */
-   .hero-btn {
-       margin-top: 20px;
-       padding: 12px 24px;
-       background: linear-gradient(to right, #00c6ff, #0072ff);
-       color: white;
-       text-decoration: none;
-       border-radius: 30px;
-       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-       transition: transform 0.3s ease, background 0.3s ease;
-       animation: fadeSlideIn 1.6s ease-out both;
-   }
-
-   .hero-btn:hover {
-       transform: scale(1.05);
-       background: linear-gradient(to right, #0072ff, #00c6ff);
-   }
-
-   /* Hero Glow Effect */
-   .hero {
-       position: relative;
-       z-index: 2;
-       text-align: center;
-       padding: 180px 20px 100px;
-       background: rgba(255, 255, 255, 0.85);
-       box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-       backdrop-filter: blur(4px);
-       border-radius: 12px;
-       animation: fadeSlideIn 3s ease-in-out both;
-   }
-
-   .hero-title {
-       font-size: 3rem;
-       color: #fff;
-       text-shadow:
-           0 0 10px rgba(255, 255, 255, 0.6),
-           0 0 20px rgba(0, 150, 255, 0.5),
-           0 0 40px rgba(0, 150, 255, 0.3);
-       animation: fadeSlideIn 1.2s ease-out both;
-   }
-
-   .hero-btn {
-       margin-top: 20px;
-       padding: 12px 24px;
-       background: linear-gradient(to right, #00c6ff, #0072ff);
-       color: white;
-       text-decoration: none;
-       border-radius: 30px;
-       box-shadow:
-           0 0 10px rgba(0, 150, 255, 0.6),
-           0;
-   }
-
-   /* Layout Container for Large Screens */
-   section,
-   header.hero,
-   .gallery-container,
-   .video,
-   .spotify-embed,
-   .testimonials,
-   .contact {
-       max-width: 1200px;
-       margin: 0 auto;
-       padding: 30px 40px;
-   }
-
-   /* Desktop Font and Nav Improvements */
-   @media (min-width: 1024px) {
-       .hero-title {
-           font-size: 3.5rem;
-       }
-
-       .hero-subtitle {
-           font-size: 1.7rem;
-       }
-
-       nav ul li {
-           margin: 0 20px;
-       }
-
-       .gallery-container {
-           gap: 30px;
-       }
-
-       .gallery-container figure {
-           flex: 1 1 300px;
-           text-align: center;
-       }
-
-       .testimonial {
-           width: 45%;
-           margin: 10px auto;
-       }
-
-       table {
-           font-size: 1.1rem;
-       }
-
-       .contact input,
-       .contact textarea {
-           font-size: 1rem;
-       }
-   }
-/* Background Video Styling */
-.intro-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Ensure video is in the background */
-    overflow: hidden;
-}
-
-.intro-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire area */
-    opacity: 0.4; /* Adjust opacity for a subtle effect */
-    pointer-events: none; /* Makes the video unclickable */
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 100px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow to the hero section */
-}
-
-.hero h1, .hero p {
-    color: #333; /* Darker text for contrast */
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    padding: 10px 20px;
-    background-color: #00c6ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero .btn:hover {
-    background-color: #0072ff;
-}
-nav {
-    position: sticky;
-    top: 0;
-}
-/* ================================
-   Hero Section Styling (Enhanced)
- ================================ */
-.hero {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 100px 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Added background color with dark overlay */
-    backdrop-filter: blur(5px); /* Apply blur effect for the background */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    color: #fff; /* White text color for contrast */
-    animation: fadeInUp 1.5s ease-out;
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .hero h1 {
-    font-size: 4rem;
-    color: #fff; /* Changed to white text */
-    font-weight: bold;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-out;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.8rem;
-    color: #ddd; /* Lighter text color */
-    font-weight: lighter;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    opacity: 0.9;
-    animation: fadeIn 1.5s ease-out 0.2s;
-}
-
-/* Updated button styling */
-.hero-btn {
-    padding: 15px 30px;
-    background-color: #00c6ff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold; /* Increased font weight */
-    border-radius: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
-    animation: buttonSlideIn 1s ease-out;
-}
-
-.hero-btn:hover {
-    transform: scale(1.05);
-    background-color: #0072ff;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Add an arrow icon to the button */
-.hero-btn:after {
-    content: ' →'; /* Add an arrow icon */
-    font-size: 1.5rem;
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-}
-
-.hero-btn:hover:after {
-    transform: translateX(10px); /* Arrow moves slightly when hovered */
-}
-
-/* Fade-in animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Button Slide-In Animation */
-@keyframes buttonSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Footer Section Styling */
-footer {
-  text-align: center;
-  padding: 40px;
-  background-color: #f9f9f9;
-  margin-top: 40px;
-}
-
-.giphy-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.2em;
   margin-bottom: 20px;
 }
 
-.giphy-embed {
-  width: 300px; /* You can adjust the size as needed */
-  height: 300px;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background: #5cb85c;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #4cae4c;
+}
+
+/* Sections */
+section {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
 }
