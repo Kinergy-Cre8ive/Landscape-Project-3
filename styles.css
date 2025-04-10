@@ -80,6 +80,10 @@ figcaption {
     color: #333;
     margin-top: 5px;
 }
+img:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
 
 /* ================================
    📸 Gallery Styling (No Extra Space)
