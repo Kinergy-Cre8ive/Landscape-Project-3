@@ -185,6 +185,22 @@
   scrollElements.forEach(el => scrollObserver.observe(el));
 </script>
 
+<script>
+  let keySequence = [];
+  const secretCode = ['m', 'a', 'r', 'k'];
+
+  document.addEventListener('keydown', (e) => {
+    keySequence.push(e.key.toLowerCase());
+    if (keySequence.length > secretCode.length) {
+      keySequence.shift(); // Keep last few keys
+    }
+
+    if (keySequence.join('') === secretCode.join('')) {
+      alert("🎧 You've unlocked 'The Impossible Dream' by Mark MaWord!");
+      window.open("https://www.youtube.com/watch?v=zHu1mWC9Jfs", "_blank");
+    }
+  });
+</script>
 
 </body>
 </html>
