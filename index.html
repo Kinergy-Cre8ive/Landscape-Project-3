@@ -178,6 +178,25 @@
     observer.observe(service);
   });
 </script>
+<script>
+  const services = document.querySelectorAll('.service');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view'); // allows re-trigger
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  services.forEach(service => {
+    observer.observe(service);
+  });
+</script>
 
 </body>
 </html>
