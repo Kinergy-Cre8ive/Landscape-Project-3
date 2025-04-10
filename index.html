@@ -2,225 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Landscaping Project</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding-top: 60px;
-      background: #f0f0f0;
-    }
-    nav {
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 10px 0;
-    }
-    nav ul {
-      list-style: none;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-    .intro-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: -1;
-      overflow: hidden;
-    }
-    .intro-video iframe {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-    .hero {
-      position: relative;
-      z-index: 1;
-      padding: 180px 20px 100px;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(4px);
-      border-radius: 12px;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      color: #222;
-      animation: fadeIn 1.2s ease-out both;
-    }
-    .hero p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      color: #444;
-      animation: fadeIn 1.4s ease-out both;
-    }
-    .hero .btn {
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: transform 0.3s ease, background 0.3s ease;
-      animation: fadeIn 1.6s ease-out both;
-    }
-    .hero .btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(to right, #0072ff, #00c6ff);
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin: 30px auto;
-    }
-    .gallery-container figure {
-      width: 300px;
-    }
-    .gallery-container img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease-in-out;
-    }
-    .gallery-container img:hover {
-      transform: scale(1.05);
-    }
-    .pricing {
-      text-align: center;
-      padding: 40px;
-    }
-    .pricing table {
-      margin: 0 auto;
-      border-collapse: collapse;
-      width: 80%;
-      background-color: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .pricing th, .pricing td {
-      padding: 15px;
-      border: 1px solid #ccc;
-    }
-    .video, .spotify-embed {
-      text-align: center;
-      margin: 50px auto;
-    }
-    .testimonials {
-      text-align: center;
-      background: #fff;
-      padding: 40px;
-    }
-    .testimonial {
-      margin: 20px auto;
-      max-width: 600px;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .modal-content {
-      margin: 10% auto;
-      background: #fff;
-      padding: 20px;
-      width: 80%;
-      max-width: 400px;
-      border-radius: 10px;
-      position: relative;
-    }
-    .close {
-      position: absolute;
-      right: 15px;
-      top: 10px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    .popup-contact {
-      text-align: center;
-      margin: 30px auto;
-    }
-    .giphy-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .giphy-embed {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .giphy-embed:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px rgba(0, 180, 255, 0.7);
-    }
-  </style>
 </head>
 <body>
+
+  <!-- Navigation Menu -->
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#services">Our Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Our Services</a></li>
     </ul>
   </nav>
 
-  <section class="intro-video">
-    <iframe src="https://www.youtube.com/embed/_FcXEaxQBpw?autoplay=1&mute=1&controls=0&loop=1&playlist=_FcXEaxQBpw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </section>
-
+  <!-- Hero Section -->
   <header class="hero">
     <h1>Transform Your Outdoor Space</h1>
     <p>Professional Landscaping Services</p>
-    <a href="#services" class="btn hero-btn">View Services</a>
+    <a href="services.html" class="btn">View Services</a>
   </header>
 
-  <section class="gallery" id="services">
+  <!-- Image Gallery -->
+  <section class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-container">
       <figure>
@@ -228,14 +33,24 @@
         <figcaption>Before Landscaping</figcaption>
       </figure>
       <figure>
-        <img src="images/after.jpg" alt="After Landscaping">
+        <img src="images/After.jpg" alt="After Landscaping">
         <figcaption>After Landscaping</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-extra">
+      <figure>
+        <a href="https://www.hgtv.com/outdoors/gardens">
+          <img src="images/lawn-care.jpg" alt="Lawn Care Services">
+        </a>
+        <figcaption>Click to Learn More</figcaption>
       </figure>
     </div>
   </section>
 
+  <!-- Pricing Table -->
   <section class="pricing">
-    <h2>Pricing Guide</h2>
+    <h2>Pricing Table</h2>
     <table>
       <tr><th>Service</th><th>Duration</th><th>Price</th></tr>
       <tr><td>Lawn Care</td><td>Monthly</td><td>$50</td></tr>
@@ -244,16 +59,19 @@
     </table>
   </section>
 
+  <!-- Embedded Video -->
   <section class="video">
     <h2>Watch Landscaping in Action</h2>
-    <iframe width="600" height="315" src="https://www.youtube.com/embed/wXP1zppk7HE" allowfullscreen></iframe>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/wXP1zppk7HE" style="border: none; max-width: 100%;" allowfullscreen></iframe>
   </section>
 
+  <!-- Spotify Embed -->
   <section class="spotify-embed">
     <h2>Listen to Our Podcast</h2>
-    <iframe src="https://open.spotify.com/embed/episode/6bsfYpklWFGZY5KQEZKctI?utm_source=generator" width="600" height="352" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://open.spotify.com/embed/episode/6bsfYpklWFGZY5KQEZKctI?utm_source=generator" width="600" height="352" style="border: none; max-width: 100%;" allowfullscreen></iframe>
   </section>
 
+  <!-- Testimonials -->
   <section class="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="testimonial">
@@ -266,28 +84,37 @@
     </div>
   </section>
 
-  <section class="popup-contact" id="contact">
+  <!-- 🔧🔺 Popup Contact Button (added) -->
+  <section class="popup-contact">
     <button id="openFormBtn" class="btn">Contact Us</button>
   </section>
 
+  <!-- 🔧🔺 Modal Contact Form (added) -->
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Contact Us</h2>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
       <textarea placeholder="Your Message"></textarea>
       <button class="btn">Send Message</button>
     </div>
   </div>
 
+  <!-- 🔧🔻 Removed old static form section here -->
+
+  <!-- 🔧🔺 Giphy Section (restructured and labeled) -->
+  <section class="giph">
+    <h2>Growing Greener</h2>
+    <iframe src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" width="188" height="99" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <div class="giphy-container">
-      <iframe id="giphy-embed" src="https://giphy.com/embed/lSCsXkcjWIG2amHk1H" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-    </div>
     <p>&copy; 2025 Landscaping Co. All rights reserved.</p>
   </footer>
 
+  <!-- 🔧🔺 Modal Script (added for popup functionality) -->
   <script>
     const modal = document.getElementById("contactModal");
     const openBtn = document.getElementById("openFormBtn");
@@ -296,31 +123,11 @@
     openBtn.onclick = () => modal.style.display = "block";
     closeBtn.onclick = () => modal.style.display = "none";
     window.onclick = (e) => {
-      if (e.target === modal) modal.style.display = "none";
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
     };
   </script>
 
-  <script>
-    document.addEventListener("mousemove", (e) => {
-      const ripple = document.createElement("div");
-      ripple.className = "splash-ripple";
-      ripple.style.left = `${e.pageX}px`;
-      ripple.style.top = `${e.pageY}px`;
-      document.body.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 800);
-    });
-  </script>
-
-  <script>
-    const gifs = [
-      "https://giphy.com/embed/lSCsXkcjWIG2amHk1H",
-      "https://giphy.com/embed/3o6ZsT0U71wHF9c5n2",
-      "https://giphy.com/embed/3o6gE5hL9lmD7rWHDW"
-    ];
-    document.getElementById("giphy-embed").addEventListener("click", function() {
-      const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-      this.src = randomGif;
-    });
-  </script>
 </body>
 </html>
