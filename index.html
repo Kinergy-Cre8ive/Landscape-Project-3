@@ -160,6 +160,21 @@
       }
     }
   </style>
+<script>
+  const scrollElements = document.querySelectorAll('.scroll-fade');
+
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view'); // re-triggers on re-entry
+      }
+    });
+  }, { threshold: 0.1 });
+
+  scrollElements.forEach(el => scrollObserver.observe(el));
+</script>
 
 
 </body>
