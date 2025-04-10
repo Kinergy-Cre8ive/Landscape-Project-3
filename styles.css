@@ -32,3 +32,44 @@ h2 {
   animation: fadeSlideIn 1.5s ease-in-out both;
   animation-delay: 0.6s;
 }
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate all service cards */
+.service {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delays for a smooth entrance */
+.service:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.service:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.service:nth-child(3) {
+  animation-delay: 0.6s;
+}
+/* Base state: hidden & shifted */
+.service {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When in view, apply animation */
+.service.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
