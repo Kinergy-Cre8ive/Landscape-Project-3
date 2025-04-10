@@ -391,7 +391,6 @@ h2 {
   animation: ripplePop 0.8s ease-out forwards;
   z-index: 9999;
 }
-
 @keyframes ripplePop {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -401,7 +400,6 @@ h2 {
     transform: translate(-50%, -50%) scale(4);
     opacity: 0;
   }
-}
 /* 🎬 Hero Title Animation */
 .hero-title {
   font-size: 3rem;
