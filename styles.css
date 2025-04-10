@@ -339,6 +339,12 @@ h2 {
   z-index: -1;
   overflow: hidden;
 }
+   .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 180px 40px 100px;
+}
+
 
 .intro-video iframe {
   width: 100%;
@@ -355,7 +361,7 @@ h2 {
   text-align: center;
   padding: 180px 20px 100px;
   background: rgba(255, 255, 255, 0.85);
-  animation: fadeSlideIn 2s ease-in-out both;
+  animation: fadeSlideIn 3s ease-in-out both;
 }
 
 /* ✨ Animated Slide & Fade In */
@@ -452,7 +458,7 @@ h2 {
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
   border-radius: 12px;
-  animation: fadeSlideIn 2s ease-in-out both;
+  animation: fadeSlideIn 3s ease-in-out both;
 }
 
 /* 🌟 Glow on Title */
@@ -522,3 +528,60 @@ h2 {
     fadeSlideIn 1.6s ease-out both,
     pulseGlow 2.5s ease-in-out infinite;
 }
+   /* 🌐 Layout Container for Large Screens */
+section,
+header.hero,
+.gallery-container,
+.video,
+.spotify-embed,
+.testimonials,
+.contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+/* 💻 Desktop Font and Nav Improvements */
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.7rem;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  .gallery-container {
+    gap: 30px;
+  }
+
+  .gallery-container figure {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+
+  .testimonial {
+    width: 45%;
+    margin: 10px auto;
+  }
+
+  table {
+    font-size: 1.1rem;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 1rem;
+  }
+}
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
