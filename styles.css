@@ -121,3 +121,11 @@ h2 {
   color: #333;
   margin-bottom: 1rem;
 }
+.gallery-container figure {
+  margin: 10px; /* Add space between images */
+}
+
+.gallery-container img {
+  max-width: 100%;
+  height: auto;
+}
