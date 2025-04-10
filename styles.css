@@ -60,14 +60,6 @@ section {
 /* ================================
    📸 Image Styling (Fixes White Space)
    ================================ */
-img {
-    display: block;  
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 10px;
-}
 
 figure {
     text-align: center;
@@ -80,10 +72,20 @@ figcaption {
     margin-top: 5px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
 img:hover {
   transform: scale(1.02);
-  transition: 0.9s ease-in-out;
 }
+
 
 .giphy-container {
   display: flex;
@@ -116,17 +118,19 @@ img:hover {
 }
 
 .gallery-container img {
-    flex: 1 1 auto;
-    max-width: 300px;
+  flex: 1 1 auto;
+  max-width: 300px;
+  border-radius: 10px; /* Add border-radius for consistency */
 }
 /* ================================
    📊 Table Styling
    ================================ */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #c0c0c0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #c0c0c0;
+  border-spacing: 0; /* Optional to remove extra space between cells */
 }
 
 th, td {
@@ -138,45 +142,56 @@ th, td {
 /* ================================
    🎥 Video & Media Sections
    ================================ */
+/* ================================
+   🎥 Video & Media Sections
+   ================================ */
 .video, .spotify-embed {
     text-align: center;
     margin: 30px;
-}
-.intro-video {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
+    padding: 20px; /* Adds padding inside the container */
+    border-radius: 15px; /* Optional: rounds the corners of the container */
+    background-color: #f0f0f0; /* Light background to differentiate sections */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds shadow around the media container */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
 }
 
-.intro-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0.4;
-  pointer-events: none;
+.video:hover, .spotify-embed:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Media Element: Responsive Images */
+.video iframe, .spotify-embed iframe {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1200px; /* Prevents videos from getting too wide on large screens */
+    border-radius: 10px; /* Rounds the corners of the iframe */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to iframes */
 }
 
 /* ================================
-   🌟 Testimonials Section
+   🌟 Testimonials Section (Enhanced)
    ================================ */
 .testimonials {
-    background-color: #b0b0b0;
+    background-color: #d8d8d8; /* Lighter gray background for contrast */
     padding: 30px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px; /* Rounded corners for the container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds shadow around the testimonials section */
 }
 
 .testimonial {
-    background: #a0a0a0;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 10px auto;
-    width: 50%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff; /* White background for individual testimonials */
+    padding: 20px;
+    border-radius: 10px; /* Rounds the corners of individual testimonials */
+    margin: 20px auto; /* Adds space around each testimonial */
+    width: 70%; /* Limits width of testimonials */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds shadow around each testimonial */
+}
+
+.testimonial p {
+    font-size: 1.1rem; /* Increase font size for readability */
+    line-height: 1.5; /* Adds space between lines for readability */
+    color: #333; /* Darker text for better contrast */
 }
 
 /* ================================
