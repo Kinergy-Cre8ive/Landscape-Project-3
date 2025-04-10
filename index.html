@@ -20,6 +20,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       color: #333;
+      animation: fadeInUp 1.5s ease-out;
     }
 
     .hero h1 {
@@ -55,6 +56,7 @@
       letter-spacing: 1px;
       position: relative;
       overflow: hidden;
+      animation: buttonSlideIn 1s ease-out;
     }
 
     .hero-btn:hover {
@@ -269,6 +271,7 @@
       background-color: #ffcc00;
       transition: all 0.3s ease;
     }
+
   </style>
 </head>
 
@@ -278,10 +281,10 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Our Services</a></li>
-      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  
+
   <!-- Intro Autoplay Background Video -->
   <section class="intro-video">
     <iframe
@@ -309,7 +312,7 @@
         <figcaption>Before Landscaping</figcaption>
       </figure>
       <figure>
-        <img src="images/After.jpg" alt="After Landscaping">
+        <img src="images/after.jpg" alt="After Landscaping">
         <figcaption>After Landscaping</figcaption>
       </figure>
     </div>
@@ -341,323 +344,7 @@
       <input type="email" placeholder="Your Email" />
       <textarea placeholder="Your Message"></textarea>
       <button class="btn">Send Message</button>
-    </div><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landscaping Project</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
-    <style>
-        /* Hero Section Improvements */
-        .hero {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 100px 20px;
-            background-color: rgba(255, 255, 255, 0.85);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-            animation: fadeInUp 1.5s ease-out; /* Animation for hero section */
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 10px;
-            animation: fadeIn 1s ease-out; /* Animation for title */
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            color: #555;
-            margin-bottom: 20px;
-            animation: fadeIn 1.2s ease-out; /* Animation for subtitle */
-        }
-
-        .hero .btn {
-            padding: 15px 30px;
-            background-color: #0072ff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            animation: buttonSlideIn 1s ease-out; /* Animation for button */
-        }
-
-        .hero .btn:hover {
-            background-color: #005bb5;
-            transform: scale(1.05); 
-        }
-
-        /* FadeIn for title animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* FadeInUp for section animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Button Slide-In Animation */
-        @keyframes buttonSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Image Gallery Section Animations */
-        .gallery-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-            animation: fadeInUp 1.5s ease-out;
-        }
-
-        .gallery-container img {
-            width: 100%;
-            max-width: 30%;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            animation: imageSlideIn 1s ease-out;
-        }
-
-        .gallery-container img:hover {
-            transform: scale(1.05); /* Hover effect for images */
-        }
-
-        /* Slide-in animation for gallery images */
-        @keyframes imageSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Pricing Table Enhancements */
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #0072ff;
-            color: #fff;
-        }
-
-        /* Contact Form Enhancements */
-        .contact {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-            padding: 30px;
-            background-color: #f8f8f8;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin: 40px 0;
-            animation: fadeInUp 1.5s ease-out;
-        }
-
-        .contact input, .contact textarea {
-            width: 100%;
-            max-width: 400px;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 1rem;
-            animation: inputFocus 1.2s ease-out;
-        }
-
-        .contact button {
-            padding: 15px 30px;
-            background-color: #0072ff;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            animation: buttonSlideIn 1s ease-out;
-        }
-
-        .contact button:hover {
-            background-color: #005bb5;
-        }
-
-        /* Input focus animation */
-        @keyframes inputFocus {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 80px 15px;
-            }
-
-            .gallery-container {
-                flex-direction: column;
-            }
-
-            .gallery-container img {
-                max-width: 90%;
-            }
-
-            .contact input, .contact textarea {
-                max-width: 100%;
-            }
-        }
-
-    </style>
-</head>
-
-<body>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Our Services</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Transform Your Outdoor Space</h1>
-        <p>Professional Landscaping Services</p>
-        <a href="services.html" class="btn">View Services</a>
-    </header>
-
-    <!-- Image Gallery -->
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="images/before.jpg" alt="Before Landscaping">
-            <img src="images/after.jpg" alt="After Landscaping">
-            <img src="https://homesteadingfamily.com/wp-content/uploads/2021/05/51155842683_58999acae8_k.jpg" alt="Composting for Better Gardening">
-        </div>
-    </section>
-
-    <!-- Pricing Table -->
-    <section class="pricing">
-        <h2>Pricing Table</h2>
-        <table>
-            <tr>
-                <th>Service</th>
-                <th>Duration</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Lawn Care</td>
-                <td>Monthly</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Garden Design</td>
-                <td>One-time</td>
-                <td>$300</td>
-            </tr>
-            <tr>
-                <td>Tree Trimming</td>
-                <td>Per Tree</td>
-                <td>$100</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- Embedded Video -->
-    <section class="video">
-        <h2>Watch Landscaping in Action</h2>
-        <iframe width="600" height="315" 
-            src="https://www.youtube.com/embed/wXP1zppk7HE" 
-            style="border: none; max-width: 100%;" 
-            allowfullscreen>
-        </iframe>
-    </section>
-
-    <!-- Spotify Embed (Fixed) -->
-    <section class="spotify-embed">
-        <h2>Listen to Our Podcast</h2>
-        <iframe src="https://open.spotify.com/embed/episode/6bsfYpklWFGZY5KQEZKctI?utm_source=generator" 
-            width="600" height="352" 
-            style="border: none; max-width: 100%;" 
-            allowfullscreen>
-        </iframe>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">
-            <p>"This landscaping service transformed my backyard! Highly recommend!"</p>
-            <h4>- Sarah J.</h4>
-        </div>
-        <div class="testimonial">
-            <p>"Professional and friendly staff. My garden has never looked better!"</p>
-            <h4>- Mike W.</h4>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
-        <button>Send Message</button>
-    </section>
-
-</body>
-</html>
-
+    </div>
   </div>
 
   <script>
@@ -673,14 +360,17 @@
       }
     };
   </script>
-document.addEventListener("mousemove", (e) => {
-    const ripple = document.createElement("div");
-    ripple.className = "splash-ripple";
-    ripple.style.left = `${e.pageX}px`;
-    ripple.style.top = `${e.pageY}px`;
-    document.body.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 800); // remove ripple after 0.8 seconds
-});
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const ripple = document.createElement("div");
+      ripple.className = "splash-ripple";
+      ripple.style.left = `${e.pageX}px`;
+      ripple.style.top = `${e.pageY}px`;
+      document.body.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 800); // remove ripple after 0.8 seconds
+    });
+  </script>
 
 </body>
 </html>
