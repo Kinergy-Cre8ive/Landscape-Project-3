@@ -73,3 +73,15 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+/* Base state: hidden & shifted */
+.service {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When in view, fade and rise */
+.service.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
