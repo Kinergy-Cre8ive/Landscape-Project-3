@@ -60,7 +60,7 @@ h2 {
 
 /* Staggered delays for service cards (smooth entrance) */
 .service:nth-child(1) {
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.8s ease forwards;https://kinergy-cre8ive.github.io/Landscape-Project-3/index.html
   animation-delay: 0.2s;
 }
 .service:nth-child(2) {
@@ -133,7 +133,7 @@ h2 {
   table {
     width: 100%;
     font-size: 14px;
-  }
+  }https://kinergy-cre8ive.github.io/Landscape-Project-3/index.html
 
   th, td {
     padding: 10px;
@@ -143,4 +143,17 @@ iframe {
   max-width: 100%;
   height: auto;
 }
+.testimonial {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial h4 {
+  color: #333;
+  font-size: 1.1rem;
+}
+
 
