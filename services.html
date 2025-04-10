@@ -196,7 +196,24 @@
   <footer>
     <p>&copy; 2025 Landscaping Project. All Rights Reserved.</p>
   </footer>
+<script>
+  const services = document.querySelectorAll('.service');
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  services.forEach(service => {
+    observer.observe(service);
+  });
+</script>
 </body>
 
 </html>
