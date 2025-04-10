@@ -1,8 +1,37 @@
-/* ✨ Animated Section Titles */
-h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 20px;
+/* ✨ General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ✨ Header and Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
 /* 🔄 Keyframes for smooth fade + slide */
@@ -17,19 +46,28 @@ h2 {
   }
 }
 
-/* 🎯 Custom animated delays for each section title */
-.gallery-title {
+/* 🎯 Animated Section Titles */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-title,
+.pricing-title,
+.testimonials-title {
   animation: fadeSlideIn 1.5s ease-in-out both;
+}
+
+.gallery-title {
   animation-delay: 0.2s;
 }
 
 .pricing-title {
-  animation: fadeSlideIn 1.5s ease-in-out both;
   animation-delay: 0.4s;
 }
 
 .testimonials-title {
-  animation: fadeSlideIn 1.5s ease-in-out both;
   animation-delay: 0.6s;
 }
 
@@ -60,7 +98,7 @@ h2 {
 
 /* Staggered delays for service cards (smooth entrance) */
 .service:nth-child(1) {
-  animation: fadeInUp 0.8s ease forwards;https://kinergy-cre8ive.github.io/Landscape-Project-3/index.html
+  animation: fadeInUp 0.8s ease forwards;
   animation-delay: 0.2s;
 }
 .service:nth-child(2) {
@@ -112,7 +150,7 @@ h2 {
   text-align: center;
   margin: 2rem auto;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 800px;
 }
 
@@ -121,6 +159,8 @@ h2 {
   color: #333;
   margin-bottom: 1rem;
 }
+
+/* Gallery Styling */
 .gallery-container figure {
   margin: 10px; /* Add space between images */
 }
@@ -129,20 +169,36 @@ h2 {
   max-width: 100%;
   height: auto;
 }
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
 @media (max-width: 768px) {
   table {
-    width: 100%;
     font-size: 14px;
-  }https://kinergy-cre8ive.github.io/Landscape-Project-3/index.html
+  }
 
   th, td {
     padding: 10px;
   }
 }
+
+/* iframe responsiveness */
 iframe {
   max-width: 100%;
   height: auto;
 }
+
+/* Testimonials Styling */
 .testimonial {
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -156,25 +212,17 @@ iframe {
   font-size: 1.1rem;
 }
 
+/* Giphy Embed Styling */
 .giphy-container iframe {
   max-width: 100%;
   height: auto;
 }
-@media (max-width: 768px) {
-  .intro-video iframe {
-    width: 100%;
-    height: auto;
-  }
-  .intro-video {
-    background-image: none; /* Hide background image on mobile */
-  }
-}
 
-/* Ensure video is full screen */
+/* Background Video Container */
 .intro-video {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
 }
 
@@ -208,6 +256,15 @@ iframe {
 
 /* Mobile-first layout */
 @media (max-width: 768px) {
+  .intro-video iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-video {
+    background-image: none; /* Hide background image on mobile */
+  }
+
   .services {
     flex-direction: column;
     align-items: center;
@@ -225,44 +282,4 @@ iframe {
   .hero p {
     font-size: 1.2rem;
   }
-}
-/* Background Video Container */
-.intro-video {
-  position: relative;
-  width: 100%;
-  height: 100vh;  /* Full viewport height */
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Keeps the video in the background */
-}
-
-/* Overlay for text */
-.video-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  z-index: 10;
-}
-
-.video-overlay h1 {
-  font-size: 4rem;
-}
-
-.video-overlay p {
-  font-size: 1.8rem;
-}
-
-.giphy-container iframe {
-  max-width: 100%;
-  height: auto;
 }
