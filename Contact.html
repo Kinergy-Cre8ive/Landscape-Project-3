@@ -38,7 +38,17 @@
   <p>Your message has been sent (kind of 😉)</p>
 </div>
 
-  
+ <script>
+  const form = document.getElementById('contactForm');
+  const popup = document.getElementById('popupMessage');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // stop real form submission
+    popup.classList.add('popup-show');
+    form.reset(); // clear form
+  });
+</script>
+ 
   <footer>
     <p>&copy; 2025 Landscaping Co. All rights reserved.</p>
   </footer>
