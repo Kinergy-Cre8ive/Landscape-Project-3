@@ -172,6 +172,16 @@
     setTimeout(() => dot.remove(), 1000);
   });
 </script>
+<script>
+  document.addEventListener("mousemove", (e) => {
+    const ripple = document.createElement("div");
+    ripple.className = "splash-ripple";
+    ripple.style.left = `${e.pageX}px`;
+    ripple.style.top = `${e.pageY}px`;
+    document.body.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 800);
+  });
+</script>
 
 </body>
 </html>
