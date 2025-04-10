@@ -374,18 +374,6 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-   .rainbow-dot {
-  position: fixed;
-  pointer-events: none;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  z-index: 9999;
-  animation: fadeOut 1s forwards;
-}
-
 @keyframes fadeOut {
   to {
     opacity: 0;
