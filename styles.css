@@ -19,7 +19,7 @@ body {
    📌 Sticky Navigation Bar (Fixed)
    ================================ */
 nav {
-    background-color: #55;
+    background-color: #333;
     padding: 10px;
     position: fixed;
     width: 100%;
