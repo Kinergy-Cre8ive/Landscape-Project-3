@@ -146,5 +146,25 @@
     <p>&copy; 2025 Landscaping Co. All rights reserved.</p>
   </footer>
      
+     <script>
+  const modal = document.getElementById("contactModal");
+  const openBtn = document.getElementById("openFormBtn");
+  const closeBtn = document.querySelector(".modal .close");
+
+  openBtn.onclick = () => {
+    modal.style.display = "block";
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
 </body>
 </html>
