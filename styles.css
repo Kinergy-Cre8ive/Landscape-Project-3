@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Light background for better contrast */
 }
 
 /* ✨ Header and Navigation */
@@ -186,6 +186,7 @@ th, td {
 @media (max-width: 768px) {
   table {
     font-size: 14px;
+    overflow-x: auto; /* Allow horizontal scroll for wide tables on mobile */
   }
 
   th, td {
@@ -263,7 +264,7 @@ iframe {
   }
 
   .intro-video {
-    background-image: none;
+    background-image: none; /* Hide background image on mobile */
   }
 
   .services {
