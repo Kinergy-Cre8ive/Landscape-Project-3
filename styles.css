@@ -111,12 +111,6 @@ img:hover {
     flex: 1 1 auto;
     max-width: 300px;
 }
-
-    /* ✅ ADD THESE NEW LINES INSIDE HERE */
-    .gallery-container, .testimonials {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
 /* ================================
    📊 Table Styling
    ================================ */
@@ -195,7 +189,6 @@ th, td {
     .contact {
         width: 90%;
     }
-
     /* ✅ ADD THESE NEW LINES INSIDE HERE */
     .gallery-container, .testimonials {
         display: flex;
