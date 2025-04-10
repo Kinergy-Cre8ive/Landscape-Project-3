@@ -503,3 +503,51 @@ th, td {
            font-size: 1rem;
        }
    }
+/* Background Video Styling */
+.intro-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Ensure video is in the background */
+    overflow: hidden;
+}
+
+.intro-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    opacity: 0.4; /* Adjust opacity for a subtle effect */
+    pointer-events: none; /* Makes the video unclickable */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow to the hero section */
+}
+
+.hero h1, .hero p {
+    color: #333; /* Darker text for contrast */
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #00c6ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #0072ff;
+}
