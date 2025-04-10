@@ -403,21 +403,6 @@
     box-shadow: 0 0 15px rgba(0, 180, 255, 0.7);
   }
 </style>
-
-<script>
-  // Add click event to change GIF
-  document.getElementById('giphy-embed').addEventListener('click', function() {
-    // Change the src to a different GIF
-    const gifs = [
-      "https://giphy.com/embed/lSCsXkcjWIG2amHk1H", // original GIF
-      "https://giphy.com/embed/3o6ZsT0U71wHF9c5n2", // second GIF
-      "https://giphy.com/embed/3o6gE5hL9lmD7rWHDW" // third GIF
-    ];
-
-    // Pick a random GIF from the array
-    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-
-    // Update the iframe source with the new GIF
     document.getElementById('giphy-embed').src = randomGif;
   });
 </script>
