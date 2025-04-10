@@ -41,7 +41,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.9s ease-in-out;
 }
 
 nav ul li a:hover {
@@ -82,10 +82,10 @@ figcaption {
 }
 img:hover {
   transform: scale(1.02);
-  transition: 0.3s ease-in-out;
+  transition: 0.9s ease-in-out;
 }
 .gif-showcase {
-    text-align: center;
+    text-align: right;
     padding: 20px;
 }
 
